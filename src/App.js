@@ -10,7 +10,7 @@ const apiKey = "98e3fb1f";
 export default function App() {
   const [movie, setMovie] = useState(null);
 
-  // The getMovie function that fetches movie data from OMDB API
+
   const getMovie = async (searchTerm) => {
     try {
       const response = await fetch(
@@ -26,13 +26,13 @@ export default function App() {
 
   // This will run on the first render but not on subsequent renders
   useEffect(() => {
-    getMovie("Clueless"); // Default movie search
+    getMovie("Clueless"); 
   }, []); // Empty dependency array ensures it runs only once on component mount
 
   return (
     <div className="App">
-      <Form moviesearch={getMovie} /> {/* Form component that triggers search */}
-      <MovieDisplay movie={movie} />  {/* Movie display component to show movie data */}
+      <Form moviesearch={getMovie} /> 
+      <MovieDisplay movie={movie} /> 
     </div>
   );
 }
