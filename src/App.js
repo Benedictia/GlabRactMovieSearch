@@ -24,7 +24,7 @@ export default function App() {
     }
   };
 
-  // This will run on the first render but not on subsequent renders
+  
   useEffect(() => {
     getMovie("Clueless"); 
   }, []); // Empty dependency array ensures it runs only once on component mount
